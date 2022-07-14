@@ -19,11 +19,14 @@ class Quiz extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.symmetric(vertical: 10.0),
+          margin: const EdgeInsets.only(top: 1.0, bottom: 10.0),
           padding: const EdgeInsets.all(10.0),
           child: Text(
             questionData.questions[index].title,
-            style: const TextStyle(fontSize: 25),
+            style: const TextStyle(
+              fontSize: 25,
+            ),
+            textAlign: TextAlign.center,
           ),
         ),
         ...questionData.questions[index].answers

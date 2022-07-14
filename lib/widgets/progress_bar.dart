@@ -13,18 +13,23 @@ class ProgressBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(15.0),
-      margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+      margin: const EdgeInsets.only(top: 10.0, left: 30.0, right: 30.0),
+      child: Column(
         children: [
           FittedBox(
             fit: BoxFit.fitWidth,
-            child: Text('$count - $total'),
+            child: Text('$count из $total вопросов'),
           ),
           const SizedBox(
-            width: 10.0,
+            height: 12.0,
           ),
-          ...icons,
+          Wrap(
+            spacing: 7.0,
+            runSpacing: 5.0,
+            alignment: WrapAlignment.start,
+            direction: Axis.horizontal,
+            children: [...icons],
+          ),
         ],
       ),
     );

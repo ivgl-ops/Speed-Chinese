@@ -21,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   void _clearState() => setState(() {
         _questionIndex = 0;
         _countResult = 0;
+        _questionIndexProgressBar = 1;
         _icons = [];
       });
 

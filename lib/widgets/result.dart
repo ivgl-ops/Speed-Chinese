@@ -14,10 +14,10 @@ class Result extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String msg = '';
-    if (0 < count && count <= 3) {
+    if (0 < count && count <= 8) {
       msg =
           'Постарайся по лучше заучить слова\n и у тебя все обязательно получится!';
-    } else if (4 <= count && count <= 7) {
+    } else if (9 <= count && count <= 15) {
       msg = 'Еще совсем чуть - чуть до цели!';
     } else {
       msg = 'Поздравляю, ты справился!';
@@ -42,16 +42,30 @@ class Result extends StatelessWidget {
           child: Text(
             msg,
             textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white, fontSize: 16),
           ),
         ),
         const Divider(
           color: Colors.white,
         ),
-        Text('Верно ответил на $count из $total'),
+        Text(
+          'Верно ответил на $count из $total',
+          textAlign: TextAlign.center,
+          style: TextStyle(color: Colors.white),
+        ),
         const Divider(
           color: Colors.white,
         ),
-        ElevatedButton(onPressed: onClearState, child: Text("Пройти еще раз")),
+        ElevatedButton(
+          onPressed: onClearState,
+          style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.purple)),
+          child: const Text(
+            "Пройти еще раз",
+            textAlign: TextAlign.center,
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
       ]),
     );
   }
