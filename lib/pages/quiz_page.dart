@@ -4,19 +4,23 @@ import 'package:chinese/widgets/quiz.dart';
 import 'package:chinese/widgets/result.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-
+class QuizPage extends StatefulWidget {
+  final topicDataList;
+  QuizPage({Key? key, required this.topicDataList}) : super(key: key);
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<QuizPage> createState() => _QuizPageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  final QuestionData data = QuestionData();
+class _QuizPageState extends State<QuizPage> {
   int _countResult = 0;
   int _questionIndex = 0;
   int _questionIndexProgressBar = 1;
   List<Container> _icons = [];
+  var data;
+
+  void initState() {
+    data = widget.topicDataList;
+  }
 
   void _clearState() => setState(() {
         _questionIndex = 0;
