@@ -16,14 +16,18 @@ class _ListTopicState extends State<ListTopic> {
     return ListView(
       children: [
         TopicCard(
-            title: 'Тема: Семья',
+            title: 'Семья',
             subtitle:
                 'В данном блоке вы пройдете тест на знание слов по теме семья',
             topicData: QuestionDataFamily()),
         TopicCard(
-            title: 'Тема: Люди',
+            title: 'Люди',
             subtitle: 'Основные слова связанные с людьми',
             topicData: QuestionDataPeople()),
+        TopicCard(
+            title: 'Офисная лексика',
+            subtitle: 'Слова которые могут использоваться в помещениях офиса',
+            topicData: QuestionDataOffice()),
       ],
     );
   }

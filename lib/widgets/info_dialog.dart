@@ -4,16 +4,6 @@ class InfoDialog extends StatelessWidget {
   const InfoDialog({Key? key, required this.data}) : super(key: key);
 
   final data;
-  void checkTrueValue(int index) {
-    if (data.questions[index].answers.map((e) => e.containsKey('isCorrect')) ==
-        true) {
-      data.questions[index].answers.map((e) => e.containsKey('answer'));
-    }
-  }
-
-  void xz(int index) {
-    var values = data.values.toList();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +16,7 @@ class InfoDialog extends StatelessWidget {
           children: <Widget>[
             Container(
               width: double.infinity,
-              height: 200,
+              height: double.infinity,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15), color: Colors.white),
               padding: const EdgeInsets.fromLTRB(20, 50, 20, 20),
@@ -34,13 +24,39 @@ class InfoDialog extends StatelessWidget {
                   padding: const EdgeInsets.all(8),
                   itemCount: data.questions.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Container(
+                    return SizedBox(
                         height: 50,
                         child: Center(
                             child: Text(
-                                '${data.questions[index].title} ${data.questions[index].answers.map((e) => (e['answer']))}')));
+                          '${data.questions[index].title} ${data.questions[index].correctAnswer}',
+                          textAlign: TextAlign.center,
+                        )));
                   }),
             ),
+            Positioned(
+                top: -5,
+                right: -4,
+                child: IconButton(
+                  icon: const Icon(
+                    Icons.cancel,
+                    size: 30,
+                    color: Colors.purple,
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                )),
+            const Positioned(
+              top: 12,
+              left: 15,
+              child: Text(
+                'Слова которые требуется выучить',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 14),
+              ),
+            )
           ],
         ));
   }

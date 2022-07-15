@@ -26,7 +26,6 @@ class _QuizPageState extends State<QuizPage> {
     data = widget.topicDataList;
 
     //загрузка словаря
-    Future(_showMaterialDialog);
     Timer.run(_showMaterialDialog);
   }
 
