@@ -15,8 +15,18 @@ class _MainPageState extends State<MainPage> {
       appBar: AppBar(
         title: const Text(
           "Китайский за месяц",
-          style: TextStyle(color: Colors.white, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontSize: 19.2),
         ),
+        leading: IconButton(
+          icon: const Icon(Icons.menu),
+          onPressed: () {},
+        ),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.question_mark),
+            onPressed: () {},
+          )
+        ],
         centerTitle: true,
         backgroundColor: Colors.purple,
       ),

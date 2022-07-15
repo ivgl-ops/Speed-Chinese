@@ -17,6 +17,7 @@ class TopicCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: const EdgeInsets.only(bottom: 5.0),
       child: ListTile(
         leading: FlutterLogo(size: 55.0),
         title: Text(title),

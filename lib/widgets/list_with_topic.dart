@@ -22,8 +22,7 @@ class _ListTopicState extends State<ListTopic> {
             topicData: QuestionDataFamily()),
         TopicCard(
             title: 'Тема: Люди',
-            subtitle:
-                'В данном блоке вы пройдете тест на знание слов по теме люди',
+            subtitle: 'Основные слова связанные с людьми',
             topicData: QuestionDataPeople()),
       ],
     );

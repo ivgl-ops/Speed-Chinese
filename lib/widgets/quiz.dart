@@ -1,3 +1,4 @@
+import 'package:chinese/widgets/info_dialog.dart';
 import 'package:flutter/material.dart';
 
 import 'answer.dart';
@@ -7,7 +8,7 @@ class Quiz extends StatelessWidget {
   final questionData;
   final onChangeAnswer;
 
-  Quiz({
+  const Quiz({
     Key? key,
     required this.index,
     required this.questionData,
@@ -22,6 +23,7 @@ class Quiz extends StatelessWidget {
           margin: const EdgeInsets.only(top: 1.0, bottom: 10.0),
           padding: const EdgeInsets.all(10.0),
           child: Text(
+            //название вопроса
             questionData.questions[index].title,
             style: const TextStyle(
               fontSize: 25,
@@ -29,6 +31,7 @@ class Quiz extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
+        //варианты ответов
         ...questionData.questions[index].answers
             .map((e) => Answer(
                   title: e['answer'],
