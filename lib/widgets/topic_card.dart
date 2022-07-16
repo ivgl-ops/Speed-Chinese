@@ -1,5 +1,8 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:chinese/pages/quiz_page.dart';
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class TopicCard extends StatelessWidget {
   const TopicCard(
@@ -19,7 +22,7 @@ class TopicCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 5.0),
       child: ListTile(
-        leading: FlutterLogo(size: 55.0),
+        leading: const FlutterLogo(size: 55.0),
         title: Text(title),
         subtitle: Text(subtitle),
         trailing: const Icon(Icons.arrow_forward_ios),
@@ -27,9 +30,10 @@ class TopicCard extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-                builder: (context) => QuizPage(
-                      topicDataList: topicData,
-                    )),
+              builder: (context) => QuizPage(
+                topicDataList: topicData,
+              ),
+            ),
           );
         },
       ),

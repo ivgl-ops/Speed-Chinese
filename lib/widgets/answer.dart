@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   final String title;
+  // ignore: prefer_typing_uninitialized_variables
   final isCorrect;
   final Function onChangeAnswer;
 
@@ -37,7 +38,7 @@ class Answer extends StatelessWidget {
         child: Container(
           alignment: Alignment.center,
           child: Text(title,
-              style: TextStyle(color: Colors.white, fontSize: 18),
+              style: const TextStyle(color: Colors.white, fontSize: 18),
               textAlign: TextAlign.center),
         ),
       ),

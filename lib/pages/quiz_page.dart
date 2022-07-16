@@ -9,8 +9,9 @@ import 'package:flutter/material.dart';
 import '../widgets/info_dialog.dart';
 
 class QuizPage extends StatefulWidget {
+  // ignore: prefer_typing_uninitialized_variables
   final topicDataList;
-  QuizPage({Key? key, required this.topicDataList}) : super(key: key);
+  const QuizPage({Key? key, required this.topicDataList}) : super(key: key);
   @override
   State<QuizPage> createState() => _QuizPageState();
 }
@@ -20,8 +21,11 @@ class _QuizPageState extends State<QuizPage> {
   int _questionIndex = 0;
   int _questionIndexProgressBar = 1;
   List<Container> _icons = [];
+  // ignore: prefer_typing_uninitialized_variables
   var data;
 
+  @override
+  // ignore: must_call_super
   void initState() {
     data = widget.topicDataList;
 
@@ -126,6 +130,7 @@ class _QuizPageState extends State<QuizPage> {
                   : Result(
                       count: _countResult,
                       total: data.questions.length,
+                      data: data,
                       onClearState: _clearState),
             ],
           ),

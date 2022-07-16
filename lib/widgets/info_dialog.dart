@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 class InfoDialog extends StatelessWidget {
   const InfoDialog({Key? key, required this.data}) : super(key: key);
 
+  // ignore: prefer_typing_uninitialized_variables
   final data;
 
   @override
   Widget build(BuildContext context) {
     return Dialog(
         backgroundColor: Colors.transparent,
-        insetPadding: EdgeInsets.all(10),
+        insetPadding: const EdgeInsets.all(10),
         child: Stack(
           clipBehavior: Clip.none,
           alignment: Alignment.center,

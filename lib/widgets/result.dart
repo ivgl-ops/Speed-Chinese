@@ -1,14 +1,19 @@
+// ignore_for_file: prefer_typing_uninitialized_variables
+
 import 'package:flutter/material.dart';
 
 class Result extends StatelessWidget {
   final count;
   final total;
   final Function() onClearState;
+  final data;
+
   const Result(
       {Key? key,
       required this.count,
       required this.total,
-      required this.onClearState})
+      required this.onClearState,
+      required this.data})
       : super(key: key);
 
   @override
@@ -22,6 +27,10 @@ class Result extends StatelessWidget {
     } else {
       msg = 'Поздравляю, ты справился!';
     }
+
+    data.maxPoint.add(total);
+
+    print(data.maxPoint);
     return Container(
       padding: const EdgeInsets.all(20.0),
       margin: const EdgeInsets.symmetric(horizontal: 30.0),
@@ -38,12 +47,10 @@ class Result extends StatelessWidget {
         ),
       ),
       child: Column(children: [
-        Container(
-          child: Text(
-            msg,
-            textAlign: TextAlign.center,
-            style: TextStyle(color: Colors.white, fontSize: 16),
-          ),
+        Text(
+          msg,
+          textAlign: TextAlign.center,
+          style: const TextStyle(color: Colors.white, fontSize: 16),
         ),
         const Divider(
           color: Colors.white,
@@ -51,7 +58,7 @@ class Result extends StatelessWidget {
         Text(
           'Верно ответил на $count из $total',
           textAlign: TextAlign.center,
-          style: TextStyle(color: Colors.white),
+          style: const TextStyle(color: Colors.white),
         ),
         const Divider(
           color: Colors.white,
