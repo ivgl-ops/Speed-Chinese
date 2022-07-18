@@ -28,6 +28,22 @@ class _ListTopicState extends State<ListTopic> {
             title: 'Офисная лексика',
             subtitle: 'Слова которые могут использоваться в помещениях офиса',
             topicData: QuestionDataOffice()),
+        TopicCard(
+            title: 'Бизнес-процессы',
+            subtitle: 'Самые базововые слова из бизнесса',
+            topicData: QuestionDataBusiness()),
+        TopicCard(
+            title: 'Электроника',
+            subtitle: 'Слова которые мы используем часто',
+            topicData: QuestionDataElecronics()),
+        TopicCard(
+            title: 'Несчастный случай',
+            subtitle: 'Слова употребляемые при несчастных случаях',
+            topicData: QuestionDataAccident()),
+        TopicCard(
+            title: 'Любовь, отношения',
+            subtitle: 'Слова которые связанные с отношениями',
+            topicData: QuestionDataLove()),
       ],
     );
   }

@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'SpeedChinese  - Изучи китайский за месяц',
         theme: ThemeData(
-          primarySwatch: Colors.red,
+          primarySwatch: Colors.purple,
           // textTheme: TextTheme(caption: ),
         ),
         home: const MainPage());

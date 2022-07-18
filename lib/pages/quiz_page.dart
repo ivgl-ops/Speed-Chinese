@@ -28,7 +28,6 @@ class _QuizPageState extends State<QuizPage> {
   // ignore: must_call_super
   void initState() {
     data = widget.topicDataList;
-
     //загрузка словаря
     Timer.run(_showMaterialDialog);
   }

@@ -23,7 +23,7 @@ class TopicCard extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 5.0),
       child: ListTile(
         leading: const FlutterLogo(size: 55.0),
-        title: Text(title),
+        title: Text("$title"),
         subtitle: Text(subtitle),
         trailing: const Icon(Icons.arrow_forward_ios),
         onTap: () {

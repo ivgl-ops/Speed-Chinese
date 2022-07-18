@@ -28,9 +28,6 @@ class Result extends StatelessWidget {
       msg = 'Поздравляю, ты справился!';
     }
 
-    data.maxPoint.add(total);
-
-    print(data.maxPoint);
     return Container(
       padding: const EdgeInsets.all(20.0),
       margin: const EdgeInsets.symmetric(horizontal: 30.0),
